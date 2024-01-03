@@ -32,8 +32,10 @@ const Newnotes = ({ onSelectGroup }) => {
   useEffect(() => {
     const handleResize = () => {
       setIsMobileView(window.innerWidth < 768);
-      if(isMobileView){
+      if(window.innerWidth<768){
         setIsNotesAreaVisible(false);
+      }else{
+        setIsNotesAreaVisible(true);
       }
     };
 
@@ -43,7 +45,7 @@ const Newnotes = ({ onSelectGroup }) => {
     return () => {
       window.removeEventListener('resize', handleResize);
     };
-  }, []);
+  }, [isMobileView]);
 
   const setColor = (event) => {
     const currentColor = event.target.style.getPropertyValue('--bg-color');

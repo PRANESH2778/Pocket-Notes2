@@ -318,12 +318,15 @@
       font-size: 40px;
     }
   
-    .Add-group {
+    .add-group {
       width: 100%;
       height: auto;
     }
     .image{
-        display: none;
+      position: absolute;
+      left: -9999px;  /* Move off-screen */
+      top: -9999px;
+      visibility: hidden;
     }
   
     .box {
@@ -398,8 +401,8 @@
   
     .Notes-Input {
       width: 360px;
-      height: 130px;
-      position: fixed;
+      height: 230px;
+      position: sticky;
       bottom: 0;
       margin-left: 180px;
       transform: translateX(-50%);
