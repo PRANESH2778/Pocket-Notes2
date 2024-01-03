@@ -31,10 +31,15 @@ const Newnotes = ({ onSelectGroup }) => {
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobileView(window.innerWidth < 768);
-      if(window.innerWidth<768){
-        setIsNotesAreaVisible(false);
-      }else{
+      const isMobile = window.innerWidth < 768;
+  
+      setIsMobileView(isMobile);
+  
+      if (selectedGroupIndex !== null && isMobile) {
+        setIsAddNotesAreaVisible(false);
+        setIsNotesAreaVisible(true);
+      } else {
+        setIsAddNotesAreaVisible(true);
         setIsNotesAreaVisible(true);
       }
     };
@@ -45,7 +50,7 @@ const Newnotes = ({ onSelectGroup }) => {
     return () => {
       window.removeEventListener('resize', handleResize);
     };
-  }, [isMobileView]);
+  }, [selectedGroupIndex]);
 
   const setColor = (event) => {
     const currentColor = event.target.style.getPropertyValue('--bg-color');
