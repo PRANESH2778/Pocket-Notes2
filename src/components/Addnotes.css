@@ -1,0 +1,16 @@
+*{
+    font-family: Roboto;
+    text-align: center;
+}
+.notes-area{
+    width: 1150px;
+    height: 100vh;
+    background-color: #DAE5F5;
+}
+.image{
+    height: 600px;
+    width: 630px;
+    margin-left: 280px;
+    margin-top: 50px;
+    line-height: 0px;
+}

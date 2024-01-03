@@ -1,0 +1,414 @@
+* {
+    font-family: Roboto;
+    line-height: 41px;
+    letter-spacing: 0.02em;
+    text-align: center;
+  }
+  
+  .Addnote-area {
+    width: 380px;
+    height: 100vh;
+    background-color: white;
+    position: relative;
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 41px;
+    letter-spacing: 0.02em;
+    text-align: center;
+  }
+  
+  .notes-area {
+    width: 1143px;
+    height: 100vh;
+    background-color: #DAE5F5;
+  }
+  
+  .image {
+    display: flex;
+    flex-direction: column;
+    height: 630px;
+    width: 630px;
+    margin-left: 280px;
+    margin-top: 50px;
+    line-height: 0px;
+  }
+  
+  .Addbutton {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background-color: #16008B;
+    position: fixed;
+    bottom: 30px;
+    color: white;
+    margin-left: 70px;
+    font-size: 70px;
+    cursor: pointer;
+  }
+  
+  .Create-group {
+    font-family: Roboto;
+    line-height: 41px;
+    letter-spacing: 0.02em;
+    font-weight: bold;
+    font-size: 25px;
+    margin-top: 25px;
+    text-align: left;
+    margin-left: 20px;
+  }
+  
+  .popup-box {
+    position: fixed;
+    left: 0;
+    top: 300px;
+    width: 100%;
+    height: 100vh;
+    border-radius: 10px;
+    z-index: 1000;
+  }
+  
+  .box {
+    position: relative;
+    width: 700px;
+    height: 300px;
+    background-color: white;
+    border: 2px solid #CCCCCC;
+    border-radius: 6px;
+    margin: 20px auto;
+    overflow: auto;
+  }
+  
+  .Group-name {
+    width: 400px;
+    height: 50px;
+    border-radius: 22px;
+    border: 2px solid #CCCCCC;
+    text-align: left;
+    font-size: 20px;
+    margin-left: 20px;
+  }
+  
+  .encrypt {
+    display: flex;
+    margin-left: 173px;
+    margin-top: 120px;
+  }
+  
+  .encrypt img {
+    margin-top: 18px;
+  }
+  
+  .encrypt p {
+    margin-left: 5px;
+  }
+  
+  .color-content {
+    text-align: left;
+    margin-top: 10px;
+  }
+  
+  .color {
+    width: 35px;
+    height: 35px;
+    background: green;
+    border-radius: 50%;
+    margin-left: 20px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+  }
+  
+  .color:hover {
+    box-shadow: 0 0 8px 0 rgba(40, 152, 54, 0.3);
+  }
+  
+  .active-color {
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.3);
+  }
+  
+  .color-groups {
+    padding: 1rem 0;
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  
+  .color-item {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background-color: var(--bg-color);
+    cursor: pointer;
+  }
+  
+  .color-item:hover {
+    border: 2px solid black;
+  }
+  
+  .color-item:active {
+    background-color: black;
+  }
+  
+  .color-list {
+    display: flex;
+    gap: 1rem;
+    margin-left: 20px;
+    justify-content: center;
+  }
+  
+  .create-btn {
+    width: 150px;
+    height: 38px;
+    border-radius: 11px;
+    cursor: pointer;
+    background-color: #001F8B;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    margin-left: 500px;
+    line-height: 32.04px;
+    letter-spacing: 3.5%;
+  }
+  
+  .add-group {
+    width: 380px;
+    height: 600px;
+    overflow: auto;
+  }
+  
+  .New-group {
+    width: 360px;
+    height: 90px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .New-group:hover {
+    background-color: lightblue;
+  }
+  
+  .New-group.selected {
+    background-color: rosybrown;
+  }
+  
+  .Group-color {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    background: bgColor; /* This should be replaced with an actual variable or color value */
+    margin-left: 20px;
+    color: white;
+  }
+  
+  .Group-color p {
+    text-align: center;
+    font-weight: bold;
+    margin: 0;
+    margin-top: 10px;
+  }
+  
+  .NewGroup-name {
+    margin-left: 20px;
+    font-weight: bold;
+  }
+  
+  .display-area {
+    width: 1143px;
+    height: 100vh;
+    background-color: #DAE5F5;
+  }
+  
+  .Selected-group {
+    height: 98px;
+    width: 1139px;
+    background-color: #001F8B;
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    color: white;
+  }
+  
+  .Text-area {
+    height: 150px;
+    width: 1090px;
+    border-radius: 9px;
+    border: 25px solid #001F8B;
+    text-align: left;
+    font-size: 29px;
+  }
+  
+  .Notes-display {
+    height: 395px;
+    width: 1143px;
+    overflow: auto;
+  }
+  
+  .Selected-groupname {
+    margin-left: 20px;
+  }
+  
+  .Notes-Input {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  
+  .Arrow-button {
+    position: absolute;
+  }
+  
+  .imageButton {
+    position: absolute;
+    bottom: 40px;
+    right: 40px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .Note-list {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 15px;
+  }
+  
+  .Note-item{
+    width: 1000px;
+    height: 200px;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 4px 20px 0px #00000040;
+    background-color: white;
+    border-radius: 5px;
+    margin-top: 15px;
+    position: relative;
+    justify-content: center;
+    font-size: 18px;
+    line-height: 28.83px;
+    padding: 30px 20px 10px 20px;
+    letter-spacing: 0.035em;
+    text-align: left;
+    color: #000000;
+}
+  .Note-text{
+    flex: 1;
+    text-align: left;
+}
+.Note-metadata{
+    margin-top: 10px;
+    text-align: right;
+}
+  
+  @media (max-width: 768px) {
+    .Addnote-area {
+      width: 100%;
+      height: auto;
+      position: static;
+    }
+  
+    .Addbutton {
+      position: fixed;
+      top: 580px;
+      left: 216px;
+      width: 60px;
+      height: 60px;
+      font-size: 40px;
+    }
+  
+    .Add-group {
+      width: 100%;
+      height: auto;
+    }
+    .image{
+        display: none;
+    }
+  
+    .box {
+      width: 330px;
+      height: 300px;
+      margin-bottom: 50px;
+    }
+  
+    .popup-box {
+      margin-bottom: 50px;
+      margin-left: -7px;
+      width: 380px;
+      height: 250px;
+    }
+  
+  
+    .Group-name {
+      width: 150px;
+      font-size: 15px;
+    }
+  
+    .create-btn {
+      width: 61px;
+      font-size: 16px;
+      margin-left: 130px;
+    }
+    .color-groups{
+      margin-bottom: 5px;
+    }
+    .color-list {
+      width: 200px;
+    }
+  
+    .Selected-group {
+      width: 360px;
+      height: auto;
+    }
+  
+    .display-area {
+      width: 350px;
+      height: auto;
+    }
+  
+    .Create-group {
+      width: 300px;
+      height: 250px;
+      font-size: 15px;
+    }
+  
+    .notes-area {
+      width: 100%;
+      height: auto;
+    }
+  
+    .Note-list {
+      width: 350px;
+      height: auto;
+    }
+  
+    .Notes-display {
+      width: 355px;
+      height: auto;
+      margin-left: 10px;
+    }
+  
+    .Note-item {
+      width: 300px;
+      height: 270px;
+      font-size: 15px;
+      margin-left: -17px;
+    }
+  
+    .Notes-Input {
+      width: 360px;
+      height: 130px;
+      position: fixed;
+      bottom: 0;
+      margin-left: 180px;
+      transform: translateX(-50%);
+    }
+    .Note-metadata{
+        margin-right: 12px;
+    }
+    .Text-area{
+        font-size: 16px;
+    }
+  }
+  
